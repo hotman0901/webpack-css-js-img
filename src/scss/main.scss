@@ -1,0 +1,45 @@
+@import "colors";
+@import "grid";
+@import "mixin";
+@import "font-awesome";
+* {
+  border: 1px solid black;
+}
+ul {
+  list-style-type: none;
+}
+
+
+#home{
+  background: url('../img/img-headerShape.png') center no-repeat ;
+  min-height: 450px;
+  // 可以設定左右上下貼合
+  background-size: 101% 100%;
+  // cover 會長的奇怪不使用
+  // background-size: cover;
+  // 子元素margin-top 崩壞
+  overflow:hidden
+  
+}
+
+
+#home .container{
+// 1.给父层添加：overflow:hidden;
+// 2.给父层添加：border除none以外的属性
+// 3.给父层添加：padding-top代替margin-top的效果。
+// margin 崩壞
+  margin-top: 140px;
+}
+.face{
+  background: url('../img/face.jpg') center no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  width: 151px;
+  height: 151px;
+  transform: rotate(-16deg);
+}
+.info li span{
+  color: #fff;
+}
+
+
