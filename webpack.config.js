@@ -102,9 +102,19 @@ module.exports = {
   plugins: [
     // extractPlugin, html 模板參考
     new HtmlWebpackPlugin({
+      // 如果想要產稱多個模板可以這樣寫
+      // filename: 'a.html',
       template: 'src/index.html',
       // 加上這一段讓CommonsChunkPlugin不會產稱error
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'dependency',
+      // 注入的js要放在哪邊可以指定
+      // inject: 'head',
+      // 可以替換html內的title文字
+      // title: 'this is new title',
+      // 可以指定entry設定的chunks要注入哪一個
+      // chunks:['app'],
+      // 或是要排除的chunks
+      // excludeChunks:['xxx']
     }),
     // 要將jquery include近來
     new webpack.ProvidePlugin({jQuery: 'jquery', $: 'jquery', jquery: 'jquery'}),
